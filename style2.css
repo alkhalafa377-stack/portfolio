@@ -1,0 +1,279 @@
+
+/* ===== Navbar ===== */
+header {
+    display: flex;
+    padding-bottom: 7%;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(124, 82, 82);
+    padding: 10px 30px;
+    border-radius: 15px;         
+    max-width: 900px;          
+    margin: 20px auto;         
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1); 
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+.container .logo { 
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.container .nav-ms {
+    display: flex;
+    list-style: none;
+    gap: 25px;                   
+    margin: 0;
+    padding: 10px;
+}
+
+.container .nav-ms li {
+    display: flex;
+    align-items: center;
+    gap: 8px; 
+}
+
+.container .nav-ms li a {
+    color: #22c55e;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: color 0.3s;
+}
+
+.container .nav-ms li a:hover {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.container .nav-ms li a i {
+    color: #22c55e;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+.container .nav-ms li a:hover i {
+    color: #ffffff;
+}
+
+/* ===== Responsive navbar ===== */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        padding: 15px 20px;
+    }
+
+    .nav-ms {
+        flex-direction: column;
+        gap: 15px;
+        margin-top: 10px;
+    }
+}
+
+/* ===== Body ===== */
+body {
+    padding-top: 15%;
+    background-color: rgb(137, 128, 113);
+    font-family: Arial, sans-serif;
+}
+
+/* ===== Headers ===== */
+h1 {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding-right: 30%;
+}
+
+h2 {
+    display: flex;
+    justify-content: center;
+    white-space: pre; 
+    padding-right: 3%;
+    padding-bottom: 7px;
+}
+
+/* ===== Features section ===== */
+.features {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+    font-size: 15px;
+    padding-right: 14%;
+}
+
+.feature {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: #000000;
+}
+
+.feature i {
+    color: #22c55e;
+    font-size: 14px;
+}
+
+/* ===== Form container (Valuta + inkomen) ===== */
+.form-container {
+    border: 2px solid #22c55e;   
+    border-radius: 12px;          
+    padding: 15px 20px;           
+    display: flex;
+    justify-content: flex-start; /* links uitlijnen */
+    align-items: flex-start; 
+    gap: 15px;                    
+    background-color: #ffffff;    
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); 
+    margin: 100px 0 0 20px;      /* 100px vanaf top, 20px van links */
+    flex-wrap: wrap; /* responsive */
+
+
+/* Field (label + input/select) */
+.field {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.field label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #333;
+}
+
+.field select {
+    width: 3cm;
+    height: 65px;
+    padding: 0px 10px;
+    border-radius: 12px;
+    border: 2px solid #22c55e;
+    font-size: 16px;
+    outline: none;
+}
+
+.field input {
+    width: 25cm;
+    height: 45px;
+    padding: 10px 15px;
+    border-radius: 12px;
+    border: 2px solid #22c55e;
+    font-size: 16px;
+    outline: none;
+}
+
+.field input:focus,
+.field select:focus {
+    border-color: #16a34a;
+}
+
+/* Knop */
+#calculate-btn {
+    height: 45px;
+    padding: 0 25px;
+    border: none;
+    border-radius: 25px;
+    background-color: #22c55e;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    align-self: flex-start;
+}
+
+#calculate-btn:hover {
+    background-color: #16a34a;
+}
+
+/* Responsive form */
+@media (max-width: 900px) {
+    .form-container {
+        flex-direction: column;
+        align-items: flex-start; /* links uitlijnen op mobiel */
+    }
+    .field input,
+    .field select {
+        width: 80%;
+    }
+    #calculate-btn {
+        align-self: flex-start;
+    }
+}
+
+/* ===== Budget container ===== */
+.budget-container {
+    padding: 20px;
+    margin: 20px 0 0 20px; /* 20px vanaf top van inputbox, 20px van links */
+    border: 2px solid #ff00b3;
+    border-radius: 12px;
+    background-color: #fff;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    font-family: Arial, sans-serif;
+}
+
+/* Header met reset knop */
+.budget-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.budget-header h3 {
+    margin: 0;
+    font-size: 18px;
+}
+
+#reset-btn {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 8px;
+    background-color: #22c55e;
+    color: white;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+#reset-btn:hover {
+    background-color: #16a34a;
+}
+
+/* Elke budgetcategorie */
+.budget-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.budget-item .category-name {
+    font-weight: 500;
+}
+
+.budget-item input {
+    width: 60px;
+    padding: 5px 10px;
+    border: 2px solid #22c55e;
+    border-radius: 8px;
+    text-align: right;
+    font-size: 14px;
+}
+
+.budget-item input:focus {
+    border-color: #16a34a;
+} }

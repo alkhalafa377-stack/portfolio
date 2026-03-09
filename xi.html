@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+</head>
+
+<nav class="container">
+<div class="logo"> MoneyPlanner</div>
+<ul class="nav-ms">
+<li> <a href="">How it works</a></li>
+<li><a href="">Features</a></li>
+<li><a href="">Pricing</a></li>
+<li><a href="">Resources</a></li>
+ </ul>
+</nav>
+  
+
+<body>
+    <h1>
+        Monthly Budget Calculator
+    </h1>
+    <H2>
+Plan your month in just a few minutes. Enter your income, set
+spending limits for each category,and instantly see your budget overview free
+private, and no account required.
+</H2>
+<div class="features">
+  
+  <div class="feature">
+    <i class="fa-solid fa-circle-check"></i>
+    <span>No account required</span>
+  </div>
+
+  <div class="feature">
+    <i class="fa-solid fa-circle-check"></i>
+    <span>100% private — works in your browser</span>
+  </div>
+
+  <div class="feature">
+    <i class="fa-solid fa-circle-check"></i>
+    <span>No data stored</span>
+  </div>
+
+<div class="form-container">
+  <!-- Valuta select -->
+  <div class="field">
+    <label for="currency">Valuta</label>
+    <select id="currency">
+      <option value="usd">$ USD</option>
+      <option value="eur">€ EUR</option>
+      <option value="jpy">¥ JPY</option>
+      <option value="gbp">£ GBP</option>
+      <option value="cny">¥ CNY</option>
+      <option value="aud">$ AUD</option>
+      <option value="chf">CHF</option>
+      <option value="hkd">$ HKD</option>
+      <option value="sgd">$ SGD</option>
+    </select>
+  </div>
+
+  <!-- Bedrag input -->
+  <div class="field">
+    <label for="amount">Maandelijks inkomen (na belasting)</label>
+    <input type="number" id="amount" placeholder="€ bijv. 50000" min="0" step="1">
+  </div>
+
+</div>
+
+<div class="budget-container">
+  <div class="budget-header">
+    <h3>Budgetcategorieën</h3>
+    <button id="reset-btn">Alles resetten</button>
+  </div>
+
+  <div class="budget-item">
+    <span class="category-name">Wonen en huur</span>
+    <input type="number" value="0" min="0">
+  </div>
+
+  <div class="budget-item">
+    <span class="category-name">Eten en boodschappen</span>
+    <input type="number" value="0" min="0">
+  </div>
+
+  <div class="budget-item">
+    <span class="category-name">Vervoer</span>
+    <input type="number" value="0" min="0">
+  </div>
+
+  <div class="budget-item">
+    <span class="category-name">Entertainment</span>
+    <input type="number" value="0" min="0">
+  </div>
+
+  <div class="budget-item">
+    <span class="category-name">Gezondheid en fitness</span>
+    <input type="number" value="0" min="0">
+  </div>
+
+  <div class="budget-item">
+    <span class="category-name">Spaargeld</span>
+    <input type="number" value="0" min="0">
+  </div>
+
+  <div class="budget-item">
+    <span class="category-name">Overige</span>
+    <input type="number" value="0" min="0">
+  </div>
+</div>
+</body>
+</html>
